@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ivory: #F8F1E3;
+  --color-peacock: #173F35;
+  --color-pitambar: #E9B949;
+  --color-krishna: #263D73;
+  --color-ink: #211D19;
+  --color-white: #FFFFFF;
+
+  --font-display: var(--font-playfair), Georgia, serif;
+  --font-sans: var(--font-manrope), var(--font-devanagari), system-ui, sans-serif;
+  --font-devanagari: var(--font-devanagari), sans-serif;
+}
+
+@layer base {
+  html,
+  body {
+    background-color: #F8F1E3;
+    color: #211D19;
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  .font-editorial {
+    font-family: var(--font-display);
+  }
+}
+
+/* Controlled Neo-Brutalist Heritage Primitives */
+.brj-surface {
+  background-color: #FFFFFF;
+  border: 1.5px solid #211D19;
+  box-shadow: 4px 4px 0px #211D19;
+}
+
+.brj-surface-soft {
+  background-color: #FFFFFF;
+  border: 1.5px solid #211D19;
+  box-shadow: 2px 2px 0px #211D19;
+}
+
+.brj-ivory-panel {
+  background-color: #F8F1E3;
+  border: 1.5px solid #211D19;
+}
+
+.brj-peacock-panel {
+  background-color: #173F35;
+  color: #F8F1E3;
+  border: 1.5px solid #211D19;
+  box-shadow: 4px 4px 0px #211D19;
+}
+
+.brj-btn-press {
+  transition: transform 140ms ease, box-shadow 140ms ease, background-color 140ms ease;
+  box-shadow: 3px 3px 0px #211D19;
+}
+
+.brj-btn-press:hover:not(:disabled) {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0px #211D19;
+}
+
+.brj-btn-press:active:not(:disabled) {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px #211D19;
+}
+
+/* Subtle Pichwai-inspired dotted textile rule */
+.brj-textile-border {
+  background-image: repeating-linear-gradient(
+    90deg,
+    #211D19 0px,
+    #211D19 6px,
+    transparent 6px,
+    transparent 10px,
+    #E9B949 10px,
+    #E9B949 14px,
+    transparent 14px,
+    transparent 18px
+  );
+  height: 3px;
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: #FFFFFF !important;
+    color: #000000 !important;
+  }
+}
